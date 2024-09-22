@@ -1,0 +1,43 @@
+<div class="task-form-container">
+  <form (ngSubmit)="saveTask()">
+    <table>
+      <tr>
+        <td><label for="title">Task Title:</label></td>
+        <td><input id="title" [(ngModel)]="task.title" name="title" placeholder="Task Title" required></td>
+      </tr>
+      <tr>
+        <td><label for="description">Description:</label></td>
+        <td><input id="description" [(ngModel)]="task.description" name="description" placeholder="Task Description" required></td>
+      </tr>
+      <tr>
+        <td><label for="assignedTo">Assigned To:</label></td>
+        <td><input id="assignedTo" [(ngModel)]="task.assignedTo" name="assignedTo" placeholder="Assigned To"></td>
+      </tr>
+      <tr>
+        <td><label for="dueDate">Due Date:</label></td>
+        <td><input type="date" id="dueDate" [(ngModel)]="task.dueDate" name="dueDate"></td>
+      </tr>
+      <tr>
+        <td><label for="priority">Priority:</label></td>
+        <td>
+          <select id="priority" [(ngModel)]="task.priority" name="priority">
+            <option value="" disabled selected>Priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="comments">Comments:</label></td>
+        <td><textarea id="comments" [(ngModel)]="task.comments" name="comments" placeholder="Comments"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit">{{ isEditMode ? 'Update Task' : 'Add Task' }}</button>
+          <a routerLink="/task-list" class="btn btn-secondary">Back to Task List</a>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>

@@ -1,0 +1,59 @@
+.task-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333; /* Dark background */
+  border: 2px solid #555; /* Border around the container */
+  border-radius: 8px; /* Rounded corners */
+  color: white; /* White text color for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+}
+
+td label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #555; /* Darker border */
+  border-radius: 4px;
+  background-color: #444; /* Dark input background */
+  color: white; /* White text for inputs */
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa; /* Light gray for placeholder text */
+}
+
+button {
+  margin-right: 10px;
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  padding: 10px 15px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded button corners */
+  cursor: pointer; /* Pointer on hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker button on hover */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Secondary button color */
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Darker on hover */
+}

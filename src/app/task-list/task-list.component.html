@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <header class="text-center mb-4">
+    <h1 class="main-title">My To-Do List</h1>
+    <h3 class="sub-title">Stay organized and efficient!</h3>
+  </header>
+
+  <div class="input-area mb-4">
+    <a routerLink="/task-form" class="btn btn-add-task">+ Add New Task</a>
+  </div>
+
+  <h2 class="task-heading">Tasks</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Assigned To</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Priority</th>
+        <th>Comments</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.assignedTo }}</td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.dueDate | date }}</td> <!-- Format date if needed -->
+        <td>{{ task.priority }}</td>
+        <td>{{ task.comments }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteTask(task.id!)">Delete</button>
+          <a [routerLink]="['/task-form', task.id]" class="btn btn-primary">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
